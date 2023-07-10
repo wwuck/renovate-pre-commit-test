@@ -45,7 +45,6 @@
                 "renovatebot/pre-commit-hooks",
                 "yamllint"
             ],
-            "minimumReleaseAge": "2 days",
             "separateMajorMinor": false
         }
     ],
