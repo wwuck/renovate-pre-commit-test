@@ -1,0 +1,53 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "autodiscover": true,
+    "configMigration": true,
+    "extends": [
+        ":dependencyDashboard",
+        ":ignoreModulesAndTests",
+        "replacements:all",
+        "workarounds:all",
+        "docker:enableMajor",
+        "docker:pinDigests",
+        "regexManagers:dockerfileVersions",
+        ":automergeDigest",
+        ":automergeMinor",
+        ":automergeRequireAllStatusChecks",
+        ":combinePatchMinorReleases",
+        ":enablePreCommit",
+        ":ignoreUnstable",
+        ":prNotPending",
+        ":rebaseStalePrs",
+        ":semanticCommits",
+        ":semanticCommitScope(deps)",
+        "github>whitesource/merge-confidence:beta",
+        ":prHourlyLimitNone"
+    ],
+    "lockFileMaintenance": {
+        "enabled": true
+    },
+    "packageRules": [
+        {
+            "groupName": "pre-commit-config",
+            "ignoreUnstable": true,
+            "labels": [
+                "pre-commit"
+            ],
+            "matchPackageNames": [
+                "abravalheri/validate-pyproject",
+                "adrienverge/yamllint",
+                "jorisroovers/gitlint",
+                "jumanjihouse/pre-commit-hooks",
+                "lyz-code/yamlfix",
+                "pappasam/toml-sort",
+                "pre-commit/pre-commit-hooks",
+                "pre-commit/pygrep-hooks",
+                "renovatebot/pre-commit-hooks",
+                "yamllint"
+            ],
+            "minimumReleaseAge": "2 days",
+            "separateMajorMinor": false
+        }
+    ],
+    "printConfig": true
+}
