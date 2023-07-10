@@ -25,5 +25,29 @@
     ],
     "lockFileMaintenance": {
         "enabled": true
-    }
+    },
+    "packageRules": [
+        {
+            "groupName": "pre-commit-config",
+            "ignoreUnstable": true,
+            "labels": [
+                "pre-commit"
+            ],
+            "matchPackageNames": [
+                "abravalheri/validate-pyproject",
+                "adrienverge/yamllint",
+                "jorisroovers/gitlint",
+                "jumanjihouse/pre-commit-hooks",
+                "lyz-code/yamlfix",
+                "pappasam/toml-sort",
+                "pre-commit/pre-commit-hooks",
+                "pre-commit/pygrep-hooks",
+                "renovatebot/pre-commit-hooks",
+                "yamllint"
+            ],
+            "minimumReleaseAge": "2 days",
+            "separateMajorMinor": false
+        }
+    ],
+    "printConfig": true
 }
