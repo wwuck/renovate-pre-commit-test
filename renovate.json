@@ -20,7 +20,7 @@
         ":rebaseStalePrs",
         ":semanticCommits",
         ":semanticCommitScope(deps)",
-        "github>whitesource/merge-confidence:beta",
+        "mergeConfidence:all-badges",
         ":prHourlyLimitNone"
     ],
     "lockFileMaintenance": {
